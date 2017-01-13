@@ -150,24 +150,24 @@ function go(){
     });
     //-----------------------------END DRAW CONTROLS---------------------------------------
 
-	//make teh nav and city buttons---------------|<>o|----thhppt---------City buttons Y'All!
-  $("#navDiv").prepend('<a class="navbar-brand" href="'+brandLink+'" target="_blank">'+brandText+'</a>');
-  $("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">{</h3></li>');
-	for(var i = 0; i<  myCities.length; i++){
-		$("#mapItMenu").append('<li id = '+myCities[i].name+' class="cityState" name='+i+'><a href="#"><span class="tab">'+myCities[i].name+'</span></a></li>');
-		if(i===0){
-				$("#"+myCities[i].name+"").addClass("active");
-		}
-	}
+	// //make teh nav and city buttons---------------|<>o|----thhppt---------City buttons Y'All!
+ //  $("#navDiv").prepend('<a class="navbar-brand" href="'+brandLink+'" target="_blank">'+brandText+'</a>');
+ //  $("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">{</h3></li>');
+	// for(var i = 0; i<  myCities.length; i++){
+	// 	$("#mapItMenu").append('<li id = '+myCities[i].name+' class="cityState" name='+i+'><a href="#"><span class="tab">'+myCities[i].name+'</span></a></li>');
+	// 	if(i===0){
+	// 			$("#"+myCities[i].name+"").addClass("active");
+	// 	}
+	// }
 
-	$('.cityState').click(function() {
-		console.log('cityclicked');
-		$('.cityState').removeClass('active');
-		$(this).addClass('active');
-		document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>NEIGHBORHOODS</b></font>"; 
-    map.fitBounds(myCities[$(this).attr('name')].bnds);
-    selectedCity = myCities[$(this).attr('name')];
-	});
+	// $('.cityState').click(function() {
+	// 	console.log('cityclicked');
+	// 	$('.cityState').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>NEIGHBORHOODS</b></font>"; 
+ //    map.fitBounds(myCities[$(this).attr('name')].bnds);
+ //    selectedCity = myCities[$(this).attr('name')];
+	// });
 	$("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">}</h3></li>');
   	//add listeners------------------------------------------------------------------------------------------------------LIsteners Y'All!
 	  $('#aboutModal').modal('show')
