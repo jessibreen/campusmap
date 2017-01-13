@@ -150,8 +150,8 @@ function go(){
     });
     //-----------------------------END DRAW CONTROLS---------------------------------------
 
-	// //make teh nav and city buttons---------------|<>o|----thhppt---------City buttons Y'All!
- //  $("#navDiv").prepend('<a class="navbar-brand" href="'+brandLink+'" target="_blank">'+brandText+'</a>');
+	//make teh nav and city buttons---------------|<>o|----thhppt---------City buttons Y'All!
+  $("#navDiv").prepend('<a class="navbar-brand" href="'+brandLink+'" target="_blank">'+brandText+'</a>');
  //  $("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">{</h3></li>');
 	// for(var i = 0; i<  myCities.length; i++){
 	// 	$("#mapItMenu").append('<li id = '+myCities[i].name+' class="cityState" name='+i+'><a href="#"><span class="tab">'+myCities[i].name+'</span></a></li>');
