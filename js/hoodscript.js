@@ -57,7 +57,7 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
   subdomains: 'abcd',
   maxZoom: 19
 })
-,sat = L.tilelayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+,sat = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
