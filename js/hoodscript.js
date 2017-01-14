@@ -57,7 +57,7 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
   subdomains: 'abcd',
   maxZoom: 19
 })
-,color = L.tilelayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+,sat = L.tilelayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
@@ -82,7 +82,7 @@ function go(){
     zoom: 2,
 
   });
-  var baseMaps = { "Positron":toner, "Mapnik": color};
+  var baseMaps = { "Positron":toner, "Mapnik": sat};
   c.addTo(map);
   L.control.layers(baseMaps).addTo(map);
   lg.addTo(map);
