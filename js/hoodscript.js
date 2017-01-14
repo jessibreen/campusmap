@@ -56,6 +56,10 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   subdomains: 'abcd',
   maxZoom: 19
+})
+,color = L.tilelayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 //,sat = L.tileLayer("http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
 //  attribution: 'Search<a href="http://www.mapquest.com/" target="_blank"><img src="http://developer.mapquest.com/content/osm/mq_logo.png"></a>, NASA/JPL, Caltech, USDA',
@@ -78,7 +82,7 @@ function go(){
     zoom: 2,
 
   });
-  var baseMaps = { "Positron":toner};
+  var baseMaps = { "Positron":toner, "Mapnik": color};
   c.addTo(map);
   L.control.layers(baseMaps).addTo(map);
   lg.addTo(map);
