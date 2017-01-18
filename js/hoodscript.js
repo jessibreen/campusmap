@@ -58,7 +58,6 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
 })
     ,sat = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
     //,toner = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
   //  attribution: '<a href="http://stamen.com/" target="_blank" >Stamen</a>'
 //})
