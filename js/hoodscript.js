@@ -2,7 +2,8 @@
 ----- Config Vars: Change these to configure for your city or cities-------------
 ---------------------------*/
 var myCities = [  //NAME AND BOUNDS OF CITIES
-    {name: "Lexington", bnds:[[37.9905,-84.5733],[38.0744,-84.4136]]} 
+    {name: "University of Kentucky", bnds:[[38.0508,-84.5413],[38.0088,-84.4617]]},
+  // {name: "Lexington", bnds:[[37.9905,-84.5733],[38.0744,-84.4136]]}
  // {name:"Portland",bnds:[[45.22,-123],[45.7814,-122.197]]},
  // {name:"Seattle", bnds:[[47.366,-122.7],[47.9,-121.88]]},
  // {name:"Vancouver",bnds:[[49.023,-123.709],[49.461,-122.4351]]}
@@ -52,16 +53,22 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
 //,fillArr = ['#8DD3C7','#FFED6F','#BEBADA','#FB8072','#80B1D3','#FDB462','#B3DE69','#FCCDE5','#D9D9D9','#BC80BD','#CCEBC5','#FFFFB3']
 //fill array from tools.medialab.sciences-po.fr/iwanthue/index.php
 ,fillArr = ["#E7C265","#8AD4E2","#ECACC1","#95D18F","#E9D5B3","#E1EF7E","#F69D92","#9CD7BF","#B2BD75","#D1D3CF","#DAC1E1","#B3C69F","#D1AB6D","#E9D898","#B0CBE6","#D9B5AB","#86E9E1","#DBEA97","#D1F1E4","#DDEBBB","#DFB991","#F3AD8E","#8CDEB5","#EDAF69","#B9F2A6","#8DC8C4","#C2E887","#E5D670","#EAD483","#C4BF6A"]
-,toner = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-    attribution: '<a href="http://stamen.com/" target="_blank" >Stamen</a>'
+    ,toner = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 })
+    ,sat = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+    //,toner = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+  //  attribution: '<a href="http://stamen.com/" target="_blank" >Stamen</a>'
+//})
 //,sat = L.tileLayer("http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", {
 //  attribution: 'Search<a href="http://www.mapquest.com/" target="_blank"><img src="http://developer.mapquest.com/content/osm/mq_logo.png"></a>, NASA/JPL, Caltech, USDA',
 //  subdomains: '1234'
 //});
 // https: also suppported.
-,sat  = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+//,sat  = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+//	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 /*---------------------------
 ----- $(window).load -------
