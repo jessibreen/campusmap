@@ -329,7 +329,7 @@ var hoodClickHandler = function(ev,latlng,pos,data){
 var hoodClickGetter = function(ll){
   getJSON.abort();
   getJSON = $.ajax(
-    {url:myPath+"/sql?q=SELECT cartodb_id FROM "+tblName+" WHERE ST_Intersects( the_geom, ST_SetSRID((ST_POINT("+ll.lng+", "+ll.lat+")) , 4326)) AND flag = false GROUP BY cartodb_id ORDER BY name ASC",
+    {url:myPath+"/sql?q=SELECT name FROM "+tblName+" WHERE ST_Intersects( the_geom, ST_SetSRID((ST_POINT("+ll.lng+", "+ll.lat+")) , 4326)) AND flag = false GROUP BY name ORDER BY name ASC",
     crossDomain:true,
       dataType:"jsonp",
       error: function (xhr, text_status, error_thrown) {
