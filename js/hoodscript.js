@@ -2,7 +2,7 @@
 ----- Config Vars: Change these to configure for your city or cities-------------
 ---------------------------*/
 var myCities = [  //NAME AND BOUNDS OF CITIES
-    {name: "University of Kentucky", bnds:[[38.0508,-84.5413],[38.0088,-84.4617]]},
+    {name: "University of Kentucky", bnds:[[38.0508,-84.5413],[38.0088,-84.4617]]}
   // {name: "Lexington", bnds:[[37.9905,-84.5733],[38.0744,-84.4136]]}
  // {name:"Portland",bnds:[[45.22,-123],[45.7814,-122.197]]},
  // {name:"Seattle", bnds:[[47.366,-122.7],[47.9,-121.88]]},
@@ -158,22 +158,22 @@ function go(){
 
 	//make teh nav and city buttons---------------|<>o|----thhppt---------City buttons Y'All!
   $("#navDiv").prepend('<a class="navbar-brand" href="'+brandLink+'" target="_blank">'+brandText+'</a>');
-  $("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">{</h3></li>');
-	for(var i = 0; i<  myCities.length; i++){
-		$("#mapItMenu").append('<li id = '+myCities[i].name+' class="cityState" name='+i+'><a href="#"><span class="tab">'+myCities[i].name+'</span></a></li>');
-		if(i===0){
-				$("#"+myCities[i].name+"").addClass("active");
-		}
-	}
-
-	$('.cityState').click(function() {
-		console.log('cityclicked');
-		$('.cityState').removeClass('active');
-		$(this).addClass('active');
-		document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>CAMPUS</b></font>";
-    map.fitBounds(myCities[$(this).attr('name')].bnds);
-    selectedCity = myCities[$(this).attr('name')];
-	});
+  // $("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">{</h3></li>');
+	// for(var i = 0; i<  myCities.length; i++){
+	// 	$("#mapItMenu").append('<li id = '+myCities[i].name+' class="cityState" name='+i+'><a href="#"><span class="tab">'+myCities[i].name+'</span></a></li>');
+	// 	if(i===0){
+	// 			$("#"+myCities[i].name+"").addClass("active");
+	// 	}
+	// }
+  //
+	// $('.cityState').click(function() {
+	// 	console.log('cityclicked');
+	// 	$('.cityState').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>CAMPUS</b></font>";
+  //   map.fitBounds(myCities[$(this).attr('name')].bnds);
+  //   selectedCity = myCities[$(this).attr('name')];
+	// });
 	$("#mapItMenu").append('<li style="top:-9px;padding-right:2px;position:relative"><h3 class="navText">}</h3></li>');
   	//add listeners------------------------------------------------------------------------------------------------------LIsteners Y'All!
 	  $('#aboutModal').modal('show')
