@@ -39,7 +39,7 @@ var selectedCity = myCities[0]//selected city defaults to first myCities city.
 ,flagIndex = null
 ,poly//var for leaflet draw 
 ,drawnItems//var for drawn polys
-,nbrhdYears = 999//no data value
+,ukYears = 999//no data value
 ,cityYears = 999//no data value
 ,hStyle = {
     "stroke":true,
@@ -228,7 +228,7 @@ function go(){
   });
   $(".nbr-group > button.btn").on("click", function(){
     num = this.name;
-    nbrhdYears = num;
+    ukYears = num;
   });
   $("#allSubmitBtn").click(function(e){
   //CHECK IF Neighborhood has a name
@@ -249,8 +249,8 @@ function go(){
     $(".nbr-group > button.btn").removeClass('active');
     //cityYears = 999;
     cityYears = num;    
-    //nbrhdYears = 999;
-    nbrhdYears = num;
+    //ukYears = 999;
+    ukYears = num;
     $('.typeahead').unbind();
 
     drawnItems.eachLayer(function (layer) {
@@ -274,7 +274,7 @@ function go(){
         description: (currentDescription.replace(/'/g,"''")).replace(/"/g,"''"),
         name: (currentNeighborhood.replace(/'/g,"''")).replace(/"/g,"''"),
         cityYears: cityYears,
-        hoodYears: nbrhdYears
+        hoodYears: ukYears
       });
       drawnItems.clearLayers();
     });
