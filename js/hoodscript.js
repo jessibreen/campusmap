@@ -2,7 +2,7 @@
 ----- Config Vars: Change these to configure for your city or cities-------------
 ---------------------------*/
 var myCities = [  //NAME AND BOUNDS OF CITIES
-    {name: "University of Kentucky", bnds:[[38.0508,-84.5413],[38.0088,-84.4617]]}
+    {name: "UK", bnds:[[38.0508,-84.5413],[38.0088,-84.4617]]}
   // {name: "Lexington", bnds:[[37.9905,-84.5733],[38.0744,-84.4136]]}
  // {name:"Portland",bnds:[[45.22,-123],[45.7814,-122.197]]},
  // {name:"Seattle", bnds:[[47.366,-122.7],[47.9,-121.88]]},
