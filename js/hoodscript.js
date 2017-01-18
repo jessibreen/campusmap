@@ -83,8 +83,8 @@ function go(){
 
   });
   var baseMaps = {
-    "Road": toner,
-    "Aerial": sat
+    "Greyscale": toner,
+    "Color w/ labels": sat
   };
   c.addTo(map);
   L.control.layers(baseMaps).addTo(map);
@@ -170,7 +170,7 @@ function go(){
 		console.log('cityclicked');
 		$('.cityState').removeClass('active');
 		$(this).addClass('active');
-		document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>NEIGHBORHOODS</b></font>"; 
+		document.getElementById("mapTitle").innerHTML = this.id+"<font size='4'><b>CAMPUS</b></font>";
     map.fitBounds(myCities[$(this).attr('name')].bnds);
     selectedCity = myCities[$(this).attr('name')];
 	});
@@ -215,7 +215,7 @@ function go(){
   });
   $("#submitPolyBtn").click(function(e){
   //CHECK IF POLYGON IS COMPLETE
-    if(drawnItems.getLayers().length<1){bootstrap_alert.warning('Oops, you need to map a neighborhood first.'); }
+    if(drawnItems.getLayers().length<1){bootstrap_alert.warning('Oops, you need to map something first.'); }
     //ELSE OPEN THE SUBMIT DIALOGUE
     else{
       $("#submitModal").modal('show');
@@ -233,7 +233,7 @@ function go(){
   $("#allSubmitBtn").click(function(e){
   //CHECK IF Neighborhood has a name
     if (!notEmpty(document.getElementById('neighborhoodName'))){
-      alert('Please enter a neighborhood name, Thanks!');  
+      alert('Please enter a description of your experience, Thanks!');
       return;
     };
     currentNeighborhood = document.getElementById('neighborhoodName').value;
@@ -278,7 +278,7 @@ function go(){
       });
       drawnItems.clearLayers();
     });
-    alert("Your neighborhood has been added! Draw more neighborhoods or take a look what has been added so far by clicking 'View Maps'.");
+    alert("Your experience has been added! Draw more or take a look what has been added so far by clicking 'View Maps'.");
   });
   $(".enableTooltipsLeft").tooltip({container:"body",placement:"left"});
   if(window.location.hash) {
