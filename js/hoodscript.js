@@ -7,7 +7,7 @@ var myCities = [  //NAME AND BOUNDS OF CITIES
  // {name:"Seattle", bnds:[[47.366,-122.7],[47.9,-121.88]]},
  // {name:"Vancouver",bnds:[[49.023,-123.709],[49.461,-122.4351]]}
 ]
-,tblName = "cartodb_query" // cartoDB table name
+,tblName = "cartodb_campus" // cartoDB table name
 ,usrName = "ukmapshop" // your cartoDB username
 ,brandText = "Mapshop" // top left text and link on site
 ,brandLink = "http://newmaps.uky.edu/mapshop" //top left link on site
