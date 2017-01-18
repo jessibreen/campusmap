@@ -231,8 +231,8 @@ function go(){
     ukYears = num;
   });
   $("#allSubmitBtn").click(function(e){
-  //CHECK IF Neighborhood has a name
-    if (!notEmpty(document.getElementById('neighborhoodName'))){
+  //CHECK IF there is a description
+    if (!notEmpty(document.getElementById('neighborhoodDescription'))){
       alert('Please enter a description of your experience, Thanks!');
       return;
     };
