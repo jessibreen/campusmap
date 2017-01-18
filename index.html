@@ -42,11 +42,11 @@
         <h3 id="myModalLabel">Campus Mapping Project</h3>
       </div>
              <div class="modal-body">
+        
+        <p> The goal of this site is to <b>collectively map experiences</b> as an representation of our campus in maps and words.</p>
         <p> Official college campus maps omit the multiple, diverse, and often contradictory experiences of place. In this project, members of campus and our broader community are invited to inscribe their own experiences on and near our campus. Their perspectives are their own and do not necessarily reflect the official position of Mapshop or the University of Kentucky. </p>
-        <p> The goal of this site is to <b>collectively map neighborhoods</b> as an image of the city in maps and words.</p>
-        <p> No neighborhood names or boundaries are here to start with. <b>You make the map</b>. Real or imagined,
-                 within the city, or crossing municipal borders. Names, extents, and descriptions are up to you. After mapping, be sure to <b>View Maps</b>. <b>All the color on this site comes from your contributions</b>.</p>
-        <p><b>NEW download a shapefile of the data contributed so far, or get the source code!</b> Check the buttons in the bottom right.</p>
+        <p> No experiences are shown as you begin. <b>You make the map</b>. You may map experiences within the campus, or crossing into the city. Names, extents, and descriptions are up to you. After mapping, be sure to <b>View Maps</b>. <b>All the color on this site comes from your contributions</b>.</p>
+        <p><b>Download a shapefile of the data contributed so far, or get the source code!</b> Check the buttons in the bottom right.</p>
         <p> <b>- Thanks!</b> </p>
       </div>
         <div class="modal-footer">
@@ -85,16 +85,16 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Just a few more things</h3>
+        <h3 id="myModalLabel">Just a few more things...</h3>
       </div>
       <div class="modal-body">
         <form class="form-horizontal" style="margin-bottom:0px"> 
           <div id="alertHolder2"></div> 
           <!--neighborhood name-->
           <div class="form-group">
-            <label for="neighborhoodName" class="col-xs-4 control-label"><span style="color:#FF0000">* </span>Neighborhood Name</label>
+            <label for="neighborhoodName" class="col-xs-4 control-label">Course ID:</label>
             <div class="col-xs-8">
-              <input class="form-control typeahead noEnterSubmit neighborhoodName" id="neighborhoodName" autocomplete="off" data-provide="typeahead">
+              <input class="form-control typeahead noEnterSubmit neighborhoodName" id="neighborhoodDescription" autocomplete="off" data-provide="typeahead">
                </div>
           </div> 
           <!--location toggle-->
@@ -121,7 +121,7 @@
               </div>
           </div>  
           <div class="form-group"> 
-            <label   class="col-xs-4 control-label" >Years lived in Neighborhood:</label>
+            <label   class="col-xs-4 control-label" >Years at UK:</label>
               <div id="neighborhoodLivingGroup" class="btn-group nbr-group col-xs-8">
                 <button type="button" class="btn btn-default" name="0">Never</button>
                 <button type="button" class="btn btn-default" name="1">< 1</button>
@@ -131,9 +131,9 @@
               </div>
           </div>  
           <div class="form-group"> 
-            <label   class="col-xs-4 control-label" >Describe or share a story about your neighborhood:</label>
+            <label   class="col-xs-4 control-label" ><span style="color:#FF0000">*</span>Describe your experience:</label>
             <div class="col-xs-8">
-            <textarea id="neighborhoodDescription" class="form-control" rows="3"></textarea>
+            <textarea id="neighborhoodName" class="form-control" rows="3"></textarea>
           </div>
           </div>
         </form>
@@ -156,10 +156,10 @@
         <h3 id="myModalLabel">Is this the data you are looking for?</h3>
       </div>
       <div class="modal-body">
-        <p>You are about to download the entire shapefile. It contains all polygons, including those that have been flagged as junk or inappropriate. Those items can be identified where the flag field=true. There are some great things to map here, so if you get the data, please let us know what you do with it!.</p>
+        <p>You are about to download the entire shapefile. It contains all polygons, including those that have been flagged as inappropriate. Those items can be identified where the flag field=true. There are some great things to map here, so if you get the data, please let us know what you do with it!.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-success" id="downloadBtn" >Gimme My Data!</button>
+        <button class="btn btn-success" id="downloadBtn" >Gimme the Data!</button>
         <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Never Mind</button>
       </div>
            </div>

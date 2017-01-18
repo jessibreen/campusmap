@@ -209,7 +209,7 @@ function go(){
   });
   $("#submitPolyBtn").click(function(e){
   //CHECK IF POLYGON IS COMPLETE
-    if(drawnItems.getLayers().length<1){bootstrap_alert.warning('Oops, you need to map a neighborhood first.'); }
+    if(drawnItems.getLayers().length<1){bootstrap_alert.warning('Oops, you need to map something first.'); }
     //ELSE OPEN THE SUBMIT DIALOGUE
     else{
       $("#submitModal").modal('show');
@@ -225,9 +225,9 @@ function go(){
     nbrhdYears = num;
   });
   $("#allSubmitBtn").click(function(e){
-  //CHECK IF Neighborhood has a name
+  //CHECK IF there is a description has a name
     if (!notEmpty(document.getElementById('neighborhoodName'))){
-      alert('Please enter a neighborhood name, Thanks!');  
+      alert('Please describe the experience you want to map. Thanks!');  
       return;
     };
     currentNeighborhood = document.getElementById('neighborhoodName').value;
@@ -272,7 +272,7 @@ function go(){
       });
       drawnItems.clearLayers();
     });
-    alert("Your neighborhood has been added! Draw more neighborhoods or take a look what has been added so far by clicking 'View Maps'.");
+    alert("Your experience has been added! Draw more or take a look what has been added so far by clicking 'View Maps'.");
   });
   $(".enableTooltipsLeft").tooltip({container:"body",placement:"left"});
   if(window.location.hash) {
